@@ -5,6 +5,7 @@ import { MeetSaleem } from './pages/MeetSaleem'
 import { Priorities } from './pages/Priorities'
 import { WardOne } from './pages/WardOne'
 import { GetInvolved } from './pages/GetInvolved'
+import { Donate } from './pages/Donate'
 import { Survey } from './pages/Survey'
 import { NotFound } from './pages/NotFound'
 import './App.css'
@@ -19,6 +20,7 @@ function App() {
           <Route path="priorities" element={<Priorities />} />
           <Route path="ward-1" element={<WardOne />} />
           <Route path="get-involved" element={<GetInvolved />} />
+          <Route path="donate" element={<Donate />} />
           <Route path="share-your-priorities" element={<Survey />} />
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ArrowRight, ExternalLink, Mail, Menu, Phone, Vote, X } from 'lucide-react'
+import { ExternalLink, HandHeart, Mail, Menu, Phone, Vote, X } from 'lucide-react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import {
   CAMPAIGN_EMAIL,
@@ -13,6 +13,7 @@ const navItems = [
   ['Priorities', '/priorities'],
   ['Ward 1', '/ward-1'],
   ['Volunteer', '/get-involved'],
+  ['Share priorities', '/share-your-priorities'],
 ]
 
 export function Layout() {
@@ -54,8 +55,8 @@ export function Layout() {
             {navItems.map(([label, path]) => (
               <NavLink key={path} to={path} onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>{label}</NavLink>
             ))}
-            <NavLink className="nav-action" to="/share-your-priorities" onClick={() => setMenuOpen(false)}>
-              Share your priorities <ArrowRight size={18} aria-hidden="true" />
+            <NavLink className="nav-action" to="/donate" onClick={() => setMenuOpen(false)}>
+              Donate <HandHeart size={18} aria-hidden="true" />
             </NavLink>
           </nav>
 
@@ -86,7 +87,7 @@ export function Layout() {
           <div className="footer-nav">
             <span>Explore</span>
             {navItems.map(([label, path]) => <Link key={path} to={path}>{label}</Link>)}
-            <Link to="/share-your-priorities">Resident survey</Link>
+            <Link to="/donate">Donate</Link>
           </div>
 
           <div className="footer-nav">
@@ -104,7 +105,7 @@ export function Layout() {
 
       <div className="mobile-actions" aria-label="Quick contact actions">
         <a href={`tel:${CAMPAIGN_PHONE_LINK}`}><Phone size={18} /> Call</a>
-        <Link to="/share-your-priorities">Have your say <ArrowRight size={18} /></Link>
+        <Link to="/donate">Donate <HandHeart size={18} /></Link>
       </div>
     </div>
   )

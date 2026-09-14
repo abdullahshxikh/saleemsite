@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://samshaikh.ca/sitemap.xml
+Sitemap: https://www.samshaikh.ca/sitemap.xml

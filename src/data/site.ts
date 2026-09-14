@@ -9,6 +9,7 @@ export const officialLinks = {
   whereToVote: 'https://www.cambridge.ca/mayor-city-council-government/elections/where-to-vote/',
   wardLookup: 'https://www.cambridge.ca/mayor-city-council-government/mayor-council/which-ward-am-i-in/',
   candidates: 'https://cambridge-ca.govstack.com/mayor-city-council-government/elections/nominations-candidate-profiles/',
+  contributions: 'https://www.ontario.ca/document/2026-voters-guide-ontario-municipal-council-and-school-board-elections/contributions',
 }
 
 export const priorityDetails = [
