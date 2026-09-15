@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react'
-import { ArrowRight, BadgeCheck, Mail, Phone } from 'lucide-react'
+import { ArrowRight, BadgeCheck, ClipboardCheck, ExternalLink, Mail, Phone, ShieldCheck, Vote } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import {
   CAMPAIGN_EMAIL,
   CAMPAIGN_PHONE_DISPLAY,
   CAMPAIGN_PHONE_LINK,
+  officialLinks,
 } from '../data/site'
 
 type PageHeroProps = {
@@ -46,6 +47,30 @@ export function CredentialStrip() {
         <div><span>WARD 1</span><p>Certified 2026 candidate</p></div>
       </div>
     </section>
+  )
+}
+
+export function VoterActionPanel() {
+  return (
+    <div className="voter-action-panel">
+      <div className="voter-action-grid">
+        <a className="voter-action-card voter-action-primary" href={officialLinks.voterPortal} target="_blank" rel="noreferrer">
+          <span className="voter-action-icon"><ClipboardCheck aria-hidden="true" /></span>
+          <span className="voter-action-kicker">Official City service</span>
+          <h3>Check the Voters’ List</h3>
+          <p>Confirm you’re registered, correct your information, or add yourself if you’re eligible.</p>
+          <span className="voter-action-link">Open the Voter Information Portal <ExternalLink size={16} aria-hidden="true" /></span>
+        </a>
+        <a className="voter-action-card" href={officialLinks.voting} target="_blank" rel="noreferrer">
+          <span className="voter-action-icon"><Vote aria-hidden="true" /></span>
+          <span className="voter-action-kicker">Official City guide</span>
+          <h3>Plan how you’ll vote</h3>
+          <p>Review eligibility, voting options, key dates, identification, and accessibility information.</p>
+          <span className="voter-action-link">Read the municipal voting guide <ExternalLink size={16} aria-hidden="true" /></span>
+        </a>
+      </div>
+      <p className="voter-action-note"><ShieldCheck size={17} aria-hidden="true" /> These links open official City election services. The campaign does not receive the information you enter.</p>
+    </div>
   )
 }
 

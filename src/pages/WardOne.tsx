@@ -1,6 +1,6 @@
-import { ArrowRight, CalendarDays, ExternalLink, Info, MapPinned, Vote } from 'lucide-react'
+import { ExternalLink, Info, MapPinned, Vote } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { CampaignCta, PageHero } from '../components/Common'
+import { CampaignCta, PageHero, VoterActionPanel } from '../components/Common'
 import { WardMap } from '../components/WardMap'
 import {
   ELECTION_DATE,
@@ -91,7 +91,7 @@ export function WardOne() {
               </article>
             ))}
           </div>
-          <div className="data-note"><Info size={18} /><p>Voting details shown here were checked against the City of Cambridge website on September 12, 2026. Always verify current details before voting.</p></div>
+          <div className="data-note"><Info size={18} /><p>Voting details shown here were checked against the City of Cambridge website on September 14, 2026. Always verify current details before voting.</p></div>
         </div>
       </section>
 
@@ -115,17 +115,18 @@ export function WardOne() {
       </section>
 
       <section className="section voter-help">
-        <div className="container voter-help-grid">
-          <CalendarDays aria-hidden="true" />
-          <div>
-            <p className="eyebrow">Make voting easier</p>
-            <h2>Check your information early.</h2>
-            <p>Confirm your ward, review identification requirements, and follow the City's instructions if you plan to vote online.</p>
+        <div className="container">
+          <div className="split-heading light-heading voter-help-heading">
+            <div>
+              <p className="eyebrow">Make voting easier</p>
+              <h2>Check your information early.</h2>
+            </div>
+            <div>
+              <p>Start with the Voters’ List, then use the City’s guide to choose how, when, and where you’ll vote.</p>
+              <Link className="text-link light" to="/share-your-priorities">Share a Ward 1 concern</Link>
+            </div>
           </div>
-          <div className="voter-help-actions">
-            <a className="button button-gold" href={officialLinks.voting} target="_blank" rel="noreferrer">Official voting info <ExternalLink size={17} /></a>
-            <Link className="text-link light" to="/share-your-priorities">Share a Ward 1 concern <ArrowRight size={17} /></Link>
-          </div>
+          <VoterActionPanel />
         </div>
       </section>
 

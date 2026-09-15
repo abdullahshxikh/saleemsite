@@ -5,6 +5,7 @@ export const ELECTION_DATE = 'Monday, October 26, 2026'
 
 export const officialLinks = {
   elections: 'https://www.cambridge.ca/mayor-city-council-government/elections/',
+  voterPortal: 'https://cambridgevlr.webvoatz.ca/en/registration',
   voting: 'https://www.cambridge.ca/mayor-city-council-government/elections/voting-in-the-municipal-election/',
   whereToVote: 'https://www.cambridge.ca/mayor-city-council-government/elections/where-to-vote/',
   wardLookup: 'https://www.cambridge.ca/mayor-city-council-government/mayor-council/which-ward-am-i-in/',

@@ -4,7 +4,6 @@ import {
   BadgeCheck,
   Building2,
   CalendarDays,
-  ExternalLink,
   Landmark,
   Leaf,
   MapPinned,
@@ -13,8 +12,8 @@ import {
   Vote,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { CampaignCta, CredentialStrip } from '../components/Common'
-import { ELECTION_DATE, officialLinks, priorityDetails } from '../data/site'
+import { CampaignCta, CredentialStrip, VoterActionPanel } from '../components/Common'
+import { ELECTION_DATE, priorityDetails } from '../data/site'
 import { usePageMeta } from '../hooks/usePageMeta'
 
 const icons = [ShieldCheck, Building2, Leaf, Landmark]
@@ -155,10 +154,8 @@ export function Home() {
             </p>
             <div className="inline-actions">
               <Link className="button button-primary" to="/ward-1"><MapPinned size={18} /> View the Ward 1 guide</Link>
-              <a className="button button-link" href={officialLinks.voting} target="_blank" rel="noreferrer">
-                City election site <ExternalLink size={16} />
-              </a>
             </div>
+            <VoterActionPanel />
           </div>
         </div>
       </section>

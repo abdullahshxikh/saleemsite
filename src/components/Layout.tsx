@@ -38,8 +38,8 @@ export function Layout() {
       <div className="election-bar">
         <div className="container election-bar-inner">
           <span><Vote size={17} aria-hidden="true" /> Cambridge votes October 26, 2026</span>
-          <a href={officialLinks.voting} target="_blank" rel="noreferrer">
-            Official voting information <ExternalLink size={14} aria-hidden="true" />
+          <a href={officialLinks.voterPortal} target="_blank" rel="noreferrer">
+            Check the Voters’ List <ExternalLink size={14} aria-hidden="true" />
           </a>
         </div>
       </div>
@@ -94,6 +94,7 @@ export function Layout() {
             <span>Contact</span>
             <a href={`tel:${CAMPAIGN_PHONE_LINK}`}><Phone size={16} /> {CAMPAIGN_PHONE_DISPLAY}</a>
             <a href={`mailto:${CAMPAIGN_EMAIL}`}><Mail size={16} /> {CAMPAIGN_EMAIL}</a>
+            <a href={officialLinks.voterPortal} target="_blank" rel="noreferrer">Check the Voters’ List <ExternalLink size={14} /></a>
             <a href={officialLinks.voting} target="_blank" rel="noreferrer">Official voting info <ExternalLink size={14} /></a>
           </div>
         </div>

@@ -126,6 +126,24 @@
 .home-ward-copy > p:not(.eyebrow) { max-width: 640px; margin: 26px 0 0; color: var(--muted); font-size: 1.1rem; line-height: 1.62; }
 .inline-actions { margin-top: 31px; display: flex; align-items: center; flex-wrap: wrap; gap: 22px; }
 
+.voter-action-panel { margin-top: 36px; }
+.voter-action-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.voter-action-card { min-height: 286px; padding: 27px 25px 25px; display: flex; align-items: flex-start; flex-direction: column; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-top: 6px solid var(--teal); box-shadow: 6px 6px 0 var(--gold); text-decoration: none; transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease; }
+.voter-action-card:hover { background: var(--white); transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--gold); }
+.voter-action-primary { color: var(--white); background: var(--teal); border-color: rgba(255,255,255,.2); border-top-color: var(--gold); box-shadow: 6px 6px 0 var(--navy); }
+.voter-action-primary:hover { background: var(--navy); box-shadow: 8px 8px 0 var(--gold); }
+.voter-action-icon { width: 44px; height: 44px; display: grid; place-items: center; color: var(--white); background: var(--red); }
+.voter-action-icon svg { width: 23px; height: 23px; }
+.voter-action-kicker { margin-top: 24px; color: var(--red); font-size: .68rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.voter-action-primary .voter-action-kicker { color: var(--gold); }
+.voter-action-card h3 { margin: 8px 0 9px; font-family: 'Barlow Condensed',sans-serif; font-size: 1.7rem; line-height: 1; text-transform: uppercase; }
+.voter-action-card p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.52; }
+.voter-action-primary p { color: rgba(255,255,255,.72); }
+.voter-action-link { margin-top: auto; padding-top: 20px; display: inline-flex; align-items: center; gap: 8px; color: var(--teal); font-size: .82rem; font-weight: 800; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+.voter-action-primary .voter-action-link { color: var(--white); }
+.voter-action-note { margin: 20px 0 0; display: flex; align-items: flex-start; gap: 9px; color: var(--muted); font-size: .76rem; line-height: 1.5; }
+.voter-action-note svg { flex: 0 0 auto; margin-top: 1px; color: var(--teal); }
+
 /* Inner-page hero */
 .page-hero { padding: 72px 0; background-color: var(--white); background-image: radial-gradient(rgba(21,54,58,.09) 1px,transparent 1px); background-size: 18px 18px; }
 .page-hero.compact { padding-block: 58px; }
@@ -253,12 +271,13 @@
 .poll-list small { color: var(--muted); }
 
 .voter-help { color: var(--white); background: var(--navy); }
-.voter-help-grid { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 35px; }
-.voter-help-grid > svg { width: 70px; height: 70px; color: var(--gold); }
 .voter-help .eyebrow { color: var(--gold); }
 .voter-help h2 { color: var(--white); font-size: clamp(2.6rem,4vw,4.2rem); }
-.voter-help p:last-child { max-width: 650px; color: rgba(255,255,255,.7); line-height: 1.55; }
-.voter-help-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.voter-help-heading > div:last-child > p { color: rgba(255,255,255,.7); }
+.voter-help .voter-action-panel { margin-top: 50px; }
+.voter-help .voter-action-card:not(.voter-action-primary) { background: var(--white); }
+.voter-help .voter-action-note { color: rgba(255,255,255,.62); }
+.voter-help .voter-action-note svg { color: var(--gold); }
 
 /* Get involved */
 .help-section { background: var(--teal-light); }
@@ -461,8 +480,6 @@
   .priority-detail-title { padding-top: 70px; }
   .platform-note-inner { grid-template-columns: 1fr; }
   .timeline article { grid-template-columns: 45px 100px 1fr; }
-  .voter-help-grid { grid-template-columns: auto 1fr; }
-  .voter-help-actions { grid-column: 1 / -1; margin-top: 15px; }
   .survey-hero-grid { gap: 48px; }
   .survey-aside { position: static; }
   .donate-hero { padding-block: 76px; }
@@ -519,8 +536,8 @@
   .timeline article { padding: 24px 0; grid-template-columns: 1fr; gap: 7px; }
   .timeline-index { display: none; }
   .timeline article > strong { font-size: 1.55rem; }
-  .voter-help-grid { grid-template-columns: 1fr; }
-  .voter-help-grid > svg { width: 52px; height: 52px; }
+  .voter-action-grid { grid-template-columns: 1fr; }
+  .voter-action-card { min-height: 270px; }
   .ward-map-frame { margin-top: 38px; padding: 8px; box-shadow: 8px 8px 0 var(--gold); }
   .ward-map-canvas { height: 430px; }
   .ward-map-key { top: 19px; left: 19px; }
